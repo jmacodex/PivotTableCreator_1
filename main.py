@@ -45,7 +45,7 @@ for i in df['STATE'].drop_duplicates():
     # Open the excel file using pywin32
     xlApp = win32.Dispatch('Excel.Application')
     xlApp.Visible = True
-    wb = xlApp.Workbooks.Open(r'C:\\Users\\samso\\Projects\\PivotTableCreator_1\\Reports\\Power Consumption - {}.xlsx'.format(i)) # path name the reports
+    wb = xlApp.Workbooks.Open(r'C:\\Users\\samso\\Projects\\PivotTableCreator_1\\Reports\\Power Consumption - {}.xlsx'.format(i)) # path name of the reports
     # Add new sheet and prepare the Data for Pivot Table
     add_new_sheet = wb.Sheets.Add(Before=None,After=wb.Sheets(wb.Sheets.count))
     new_sheet = add_new_sheet.Name = 'Pivot_Table'
